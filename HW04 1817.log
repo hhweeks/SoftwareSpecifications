@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  25 SEP 2017 18:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  26 SEP 2017 09:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -131,14 +131,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--19
  []
 
 
-Overfull \hbox (7.51903pt too wide) in paragraph at lines 29--29
+Underfull \hbox (badness 10000) in paragraph at lines 22--25
+
+ []
+
+
+Overfull \hbox (7.51903pt too wide) in paragraph at lines 31--31
 [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--39
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--47
+
  []
 
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 34--35
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
@@ -146,11 +161,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
 Here is how much of TeX's memory you used:
  1381 strings out of 493089
  17078 string characters out of 6134842
- 73906 words of memory out of 5000000
+ 74906 words of memory out of 5000000
  4906 multiletter control sequences out of 15000+600000
  7296 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,10n,26p,228b,245s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,10n,26p,228b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
@@ -160,7 +175,7 @@ nts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msam10.pfb>
-Output written on "HW04 1817.pdf" (2 pages, 87551 bytes).
+Output written on "HW04 1817.pdf" (2 pages, 88632 bytes).
 PDF statistics:
  43 PDF objects out of 1000 (max. 8388607)
  30 compressed objects within 1 object stream

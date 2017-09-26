@@ -16,11 +16,13 @@ show:\\
 $\mu=k>0 \leadsto \mu<k$\\
 $\mu=0\implies \emph{post}$\\
 \begin{enumerate}
+
+
 \item
 init $\leadsto$ post\\
-let's define $\mu$:
+let's define $\mu$:\\
+$\mu = \langle \ \Sigma \ \forall \ x : \pi(x) :: L(x) \neq \lambda(x) \ \rangle\\$
 \begin{align*}
-&\mu = \langle \ \Sigma \ \forall \ x : \pi(x) :: L(x) \neq \lambda(x) \ \rangle\\
 &\mu = k \leadsto \mu < k\\
 &\emph{because}\\
 &\pi(x)=(i,j) \wedge L(x)\neq \lambda(x) \wedge \pi(y)=(p,q) \wedge L(y)=\lambda(y)\\
@@ -29,6 +31,21 @@ let's define $\mu$:
 \end{align*}
 //need to show that for every region there exists at least one x such that L(x) = $\lambda$(x)\\
 //need to show that $\mu\implies$post
+\begin{align*}
+&\mu = 0 \implies post
+\end{align*}
+if the number of elements that don't have there final label is equal to zero, then all elements must have there final label\\
+$\checkmark \ \mu = 0 \implies \langle \forall x : \pi(x) :: L(x)=\lambda(x) \rangle$\\
+
+\begin{align*}
+&L(x) = L(y) \wedge \neg(x \Gamma y) \implies L(x)\neq\lambda(x) \vee L(y)\neq \lambda(y)\\
+\end{align*}
+which implies that
+$\mu(x) > 0$\\
+therefore\\
+$\checkmark \mu(x)=0 \implies  \langle \forall x,y \ : \pi(x) \ \wedge \pi(x) \wedge \neg(x \Gamma y) :: \ L(x) \neq L(x)  \ \rangle\\$
+
+
 \newpage
 \item
 \textbf{stable} post\\
