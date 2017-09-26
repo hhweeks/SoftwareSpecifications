@@ -10,6 +10,21 @@
 
 \hfill September 24, 2017
 \section*{Homework 4}
+Invariant 1: $\langle \exists x: \pi(x) :: L(x) \neq \lambda(x) \ \rangle$ \\
+Let $x$ = (i,j)  and $y$ = (p,q)\\
+Initially, L(i, j) = (i, j). There is a label which is smaller than every other labels in the same region.\\
+Furthermore, assume ``if\ SameRegion((i,j),(p,q))'' is true,\\
+the statement L(i,j):= min(L(i,j),L(p,q)) ensures L(y)=$\lambda(y)$=$\lambda(x)$\\
+Thus, there always exists a cell x whose label is $\lambda(x)$.\\
+\\
+Invariant 2: $\langle \forall x,y: \pi(x) \wedge \pi(y) \wedge \neg(x \Gamma y) :: L(x) \neq L(y) \ \rangle$ \\
+Let $x$ = (i,j)  and $y$ = (a,b)\\
+Initially, $L(x) = (i,j) \wedge L(y) = (a,b) \wedge (i,j)\neq(a,b) \implies L(x) \neq L(y)$\\
+which means cell x and y have different initial labels.\\
+Furthermore, there exists the statement $S_{ijpq}$ ensures L(x)=$\lambda(x)$ and\\a statement $S_{abcd}$ ensures L(y)=$\lambda(y)$.\\
+$if \neg(x \Gamma y)$ is true, then $\lambda(x)$$\neq$$\lambda(y)$, $\implies$ L(x) $\neq$ L(y)\\
+when L(x) $\neq$ L(y), none of the assignment alter the state.\\
+\\
 Concept:\\ $\mu$ = number of cells without final label. this is a well founded metric because...\\
 $\mu = \langle \sum a :: \neg \emph{final label } a \rangle$\\
 show:\\
@@ -74,15 +89,18 @@ $\checkmark \mu(x)=0 \implies  \langle \forall x,y \ : \pi(x) \ \wedge \pi(x) \w
 &post \equiv \langle \forall x \ : \ \pi(x) \ :: \ L(x) = \lambda(x) \ \rangle\\
 &\wedge \ \langle \forall x,y \ : \pi(x) \ \wedge \pi(x) \wedge \neg(x \Gamma y) :: \ L(x) \neq L(x)  \ \rangle\\
 \\
-&part 1:\\
-&post \equiv \langle \forall x \ : \ \pi(x) \ :: \ L(x) = \lambda(x) \ \rangle\\
-&//\emph{this needs a proof}\\
+&part 1:
+post \equiv \langle \forall x \ : \ \pi(x) \ :: \ L(x) = \lambda(x) \ \rangle\\
+&Let\ x = (i,j) \ and \ y = (p,q)\\
+&There \ exists \ the \ statement\ S_{ijpq} \ ensures L(x)=\lambda(x) \ and\\ 
+&a\ statement \ S_{abcd}\ ensures \ L(y)=\lambda(y).\\
+&Assume\ ``if\ SameRegion((i,j),(p,q))'' \ is\ true,\ which\ means\ x\ \rho\ y.\\ 
+&then \ \lambda(x)=\lambda(y)\ \implies L(x)=L(y)=\lambda(x)=\lambda(y)\\
+&which\ means\ all\ cells\ in \ the\ same\ region\ share\ the\ same\ final\ label.\\
 \\
-&part 2:\\
-&invariant: \langle \forall x,y : \pi(x) \ \wedge \ \neg(x\Gamma y) :: L(x)\neq L(y) \rangle\\
-&because:\\
-&initially \ L(x) \neq L(y)\\
-&stable \ L(x) \neq L(y)\\
+&part 2:
+\langle \forall x,y : \pi(x) \ \wedge \ \neg(x\Gamma y) :: L(x)\neq L(y) \rangle\\
+&It\ is\ the\ invariant2\ proved\ on\ page\ 1.
 \end{align*}
 \end{enumerate}
 
