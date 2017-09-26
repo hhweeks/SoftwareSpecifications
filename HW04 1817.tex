@@ -22,8 +22,22 @@ $\mu=0\implies \emph{post}$\\
 init $\leadsto$ post\\
 let's define $\mu$:\\
 $\mu = \langle \ \Sigma \ \forall \ x : \pi(x) :: L(x) \neq \lambda(x) \ \rangle\\$
+
+With this $\mu$ in mind, we would like to show 2 things:\\
+1. $\mu$ only decreases and 2. when $\mu=0$, then we have reached post.\\
+
+Part 1:\\
 \begin{align*}
-&\mu = k \leadsto \mu < k\\
+&\mu = k \leadsto \mu < k
+\end{align*}
+$\mu$ increases or stays the same. If $k$ is 0, then it never decreases, just remains 0. If $k$ is greater than 0, then there exists a statement $S_{ijpq}$ where $(i,j)$ is an element that does not have its final label and $(p,q)$ does have its final label. Then\\
+\begin{align*}
+S_{ijpq} \ ensures \ \mu < k\\
+\end{align*}
+By invariant 1 we know that such an element pq always exists.\\
+
+\iffalse
+\begin{align*}
 &\emph{Let's say that:}\\
 &\pi(x)=(i,j) \wedge L(x)\neq \lambda(x) \wedge \pi(y)=(p,q) \wedge L(y)=\lambda(y)\\
 &\emph{then}\\
@@ -33,13 +47,17 @@ $\mu = \langle \ \Sigma \ \forall \ x : \pi(x) :: L(x) \neq \lambda(x) \ \rangle
 \end{align*}
 meaning that if x does not have its final label and y does have its final label, then we can select the assignment statement that takes x and y, and this statement ensures that $\mu$ decreases.\\
 Additionally, there always exists such a $y$ that $L(y)=\lambda(y)$, because at least one element is set to the minimum label in its region.\\
+\fi
 
+Part2:\\
 \begin{align*}
-&\mu = 0 \implies post
+&\mu = 0 \implies post\\
 \end{align*}
-if the number of elements that don't have there final label is equal to zero, then all elements must have there final label\\
+
+First, if the number of elements that don't have there final label is equal to zero, then all elements must have there final label\\
 $\checkmark \ \mu = 0 \implies \langle \forall x : \pi(x) :: L(x)=\lambda(x) \rangle$\\
 
+Second, if we have 2 elements that are not in the same region but have the same label, that implies that one of those elements does not have its final label:\\
 \begin{align*}
 &L(x) = L(y) \wedge \neg(x \Gamma y) \implies L(x)\neq\lambda(x) \vee L(y)\neq \lambda(y)\\
 \end{align*}
