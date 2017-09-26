@@ -4,12 +4,14 @@
 \usepackage{amssymb}
 
 \begin{document}
-\hfill Hans Weeks
+\hfill Hans Weeks and Christina Yu
 
 \hfill Software Specifications
 
 \hfill September 24, 2017
 \section*{Homework 4}
+In the following proof we show that program specified in assignment 3 meets the specification from assignment 2. Namely, that a matrix with 1 color and 1 label per element will eventually have each color-region with a matching label unique to that region. We do this by introducing 2 invariants, then showing that init leads to post using a well founded metric. Then we show that once we have reached post, the program does not change.\\
+
 Invariant 1: $\langle \exists x: \pi(x) :: L(x) \neq \lambda(x) \ \rangle$ \\
 Let $x$ = (i,j)  and $y$ = (p,q)\\
 Initially, L(i, j) = (i, j). There is a label which is smaller than every other labels in the same region.\\
@@ -24,12 +26,6 @@ which means cell x and y have different initial labels.\\
 Furthermore, there exists the statement $S_{ijpq}$ ensures L(x)=$\lambda(x)$ and\\a statement $S_{abcd}$ ensures L(y)=$\lambda(y)$.\\
 $if \neg(x \Gamma y)$ is true, then $\lambda(x)$$\neq$$\lambda(y)$, $\implies$ L(x) $\neq$ L(y)\\
 when L(x) $\neq$ L(y), none of the assignment alter the state.\\
-\\
-Concept:\\ $\mu$ = number of cells without final label. this is a well founded metric because...\\
-$\mu = \langle \sum a :: \neg \emph{final label } a \rangle$\\
-show:\\
-$\mu=k>0 \leadsto \mu<k$\\
-$\mu=0\implies \emph{post}$\\
 \begin{enumerate}
 
 
@@ -37,6 +33,7 @@ $\mu=0\implies \emph{post}$\\
 init $\leadsto$ post\\
 let's define $\mu$:\\
 $\mu = \langle \ \Sigma \ \forall \ x : \pi(x) :: L(x) \neq \lambda(x) \ \rangle\\$
+This is well founded because initially only 1 element per region is correctly labeled.
 
 With this $\mu$ in mind, we would like to show 2 things:\\
 1. $\mu$ only decreases and 2. when $\mu=0$, then we have reached post.\\
