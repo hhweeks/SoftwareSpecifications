@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{amssymb}
+
+\begin{document}
+\hfill Hans Weeks
+
+\hfill Software Specifications
+
+\hfill September 24, 2017
+\section*{Homework 4}
+Concept:\\ $\mu$ = number of cells without final label. this is a well founded metric because...\\
+$\mu = \langle \sum a :: \neg \emph{final label } a \rangle$\\
+show:\\
+$\mu=k>0 \leadsto \mu<k$\\
+$\mu=0\implies \emph{post}$\\
+\begin{enumerate}
+\item
+init $\leadsto$ post\\
+let's define $\mu$:
+\begin{align*}
+&\mu = \langle \ \Sigma \ \forall \ x : \pi(x) :: L(x) \neq \lambda(x) \ \rangle\\
+&\mu = k \leadsto \mu < k\\
+&\emph{because}\\
+&\pi(x)=(i,j) \wedge L(x)\neq \lambda(x) \wedge \pi(y)=(p,q) \wedge L(y)=\lambda(y)\\
+&L(i,j) := min(L(i,j),L(p,q)) \ if \ SameRegion((i,j),(p,q)) \ ensures \ L(x)=\lambda(x)\\
+&\langle \forall x \ : \pi(x)=(i,j) \ :: \exists \ i,j : 0 \leq i,j \leq N :: L(x)=\lambda(x) \ \rangle\\
+\end{align*}
+//need to show that for every region there exists at least one x such that L(x) = $\lambda$(x)\\
+//need to show that $\mu\implies$post
+\newpage
+\item
+\textbf{stable} post\\
+\begin{align*}
+&post \equiv \langle \forall x \ : \ \pi(x) \ :: \ L(x) = \lambda(x) \ \rangle\\
+&\wedge \ \langle \forall x,y \ : \pi(x) \ \wedge \pi(x) \wedge \neg(x \Gamma y) :: \ L(x) \neq L(x)  \ \rangle\\
+\\
+&part 1:\\
+&post \equiv \langle \forall x \ : \ \pi(x) \ :: \ L(x) = \lambda(x) \ \rangle\\
+&//\emph{this needs a proof}\\
+\\
+&part 2:\\
+&invariant: \langle \forall x,y : \pi(x) \ \wedge \ \neg(x\Gamma y) :: L(x)\neq L(y) \rangle\\
+&because:\\
+&initially \ L(x) \neq L(y)\\
+&stable \ L(x) \neq L(y)\\
+\end{align*}
+\end{enumerate}
+
+\end{document}
