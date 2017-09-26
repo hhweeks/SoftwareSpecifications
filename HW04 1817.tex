@@ -24,13 +24,16 @@ let's define $\mu$:\\
 $\mu = \langle \ \Sigma \ \forall \ x : \pi(x) :: L(x) \neq \lambda(x) \ \rangle\\$
 \begin{align*}
 &\mu = k \leadsto \mu < k\\
-&\emph{because}\\
+&\emph{Let's say that:}\\
 &\pi(x)=(i,j) \wedge L(x)\neq \lambda(x) \wedge \pi(y)=(p,q) \wedge L(y)=\lambda(y)\\
+&\emph{then}\\
 &L(i,j) := min(L(i,j),L(p,q)) \ if \ SameRegion((i,j),(p,q)) \ ensures \ L(x)=\lambda(x)\\
+&\emph{and}\\
 &\langle \forall x \ : \pi(x)=(i,j) \ :: \exists \ i,j : 0 \leq i,j \leq N :: L(x)=\lambda(x) \ \rangle\\
 \end{align*}
-//need to show that for every region there exists at least one x such that L(x) = $\lambda$(x)\\
-//need to show that $\mu\implies$post
+meaning that if x does not have its final label and y does have its final label, then we can select the assignment statement that takes x and y, and this statement ensures that $\mu$ decreases.\\
+Additionally, there always exists such a $y$ that $L(y)=\lambda(y)$, because at least one element is set to the minimum label in its region.\\
+
 \begin{align*}
 &\mu = 0 \implies post
 \end{align*}

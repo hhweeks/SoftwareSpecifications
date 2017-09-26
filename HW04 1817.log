@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  26 SEP 2017 09:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  26 SEP 2017 10:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -136,32 +136,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--25
  []
 
 
-Overfull \hbox (7.51903pt too wide) in paragraph at lines 31--31
+Overfull \hbox (7.51903pt too wide) in paragraph at lines 33--33
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--39
+Underfull \hbox (badness 10000) in paragraph at lines 33--36
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--47
+Underfull \hbox (badness 10000) in paragraph at lines 39--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--50
 
  []
 
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
-[2] (./HW04 1817.aux) ) 
+[3] (./HW04 1817.aux) ) 
 Here is how much of TeX's memory you used:
  1381 strings out of 493089
  17078 string characters out of 6134842
- 74906 words of memory out of 5000000
+ 75906 words of memory out of 5000000
  4906 multiletter control sequences out of 15000+600000
  7296 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -175,10 +181,10 @@ nts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msam10.pfb>
-Output written on "HW04 1817.pdf" (2 pages, 88632 bytes).
+Output written on "HW04 1817.pdf" (3 pages, 89781 bytes).
 PDF statistics:
- 43 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
+ 46 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
