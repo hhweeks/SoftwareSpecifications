@@ -11,7 +11,7 @@
 \hfill September 24, 2017
 \section*{Homework 4}
 In the following proof we show that program specified in assignment 3 meets the specification from assignment 2. Namely, that a matrix with 1 color and 1 label per element will eventually have each color-region with a matching label unique to that region. We do this by introducing 2 invariants, then showing that init leads to post using a well founded metric. Then we show that once we have reached post, the program does not change.\\
-
+\\
 Invariant 1: $\langle \exists x: \pi(x) :: L(x) \neq \lambda(x) \ \rangle$ \\
 Let $x$ = (i,j)  and $y$ = (p,q)\\
 Initially, L(i, j) = (i, j). There is a label which is smaller than every other labels in the same region.\\
@@ -94,6 +94,7 @@ post \equiv \langle \forall x \ : \ \pi(x) \ :: \ L(x) = \lambda(x) \ \rangle\\
 &Assume\ ``if\ SameRegion((i,j),(p,q))'' \ is\ true,\ which\ means\ x\ \rho\ y.\\ 
 &then \ \lambda(x)=\lambda(y)\ \implies L(x)=L(y)=\lambda(x)=\lambda(y)\\
 &which\ means\ all\ cells\ in \ the\ same\ region\ share\ the\ same\ final\ label.\\
+&And \ once \ L(x)=L(y)=\lambda(x)=\lambda(y), \ none\ of\ the\ assignment\ alter\ the \ state.\\
 \\
 &part 2:
 \langle \forall x,y : \pi(x) \ \wedge \ \neg(x\Gamma y) :: L(x)\neq L(y) \rangle\\
