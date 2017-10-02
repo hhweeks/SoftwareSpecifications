@@ -9,21 +9,27 @@
 \hfill Software Specifications
 
 \hfill October 1, 2017
-\section*{Homework 5}
+\section*{Homework 5: Formal properties}
 \textbf{Program Description}\\
-
+Consider a square matrix B of size N. Let A represent the initial configuration of the matrix B. \\
 \begin{enumerate}
 \item
+Write a UNITY program that transposes the rows and columns of matrix B and preserves the following invariant:\\
+\begin{align*}
+ inv. \ p \leq \ q \wedge \\
+&\langle \ \forall i,j \ : \ (1\leq i <p \vee 1 \leq j<p \vee q<i \leq N \vee q<j \leq N) \wedge \ 1 \leq i \leq N \wedge 1 \leq j \leq N \ :: \\ 
+&B[i,j]=A[j,i]\rangle\\
+\end{align*}
+\\
 \textbf{Program} Transpose\\
+\\
 \textbf{declare}\\
-
 \begin{align*}
 &A: array \ [1..N,\ 1..N]\ of \ integer\\
 &p, q: integer
 \end{align*}
 
 \textbf{initially}\\
-
 \begin{align*}
 A=B\quad&\\
 p=1\quad&\\
@@ -33,7 +39,6 @@ q=N\quad&\\
 
 \textbf{always}\\
 \textbf{assign}\\
-
 \begin{align*}
 &\langle \ || \ i,j : 1\leq i,j< (p+1) \ :: A[i,j]:=B[j,i] \rangle \\
 &||\\
@@ -42,8 +47,15 @@ q=N\quad&\\
 &p,q := p+1,\ q-1\ if\ p \leq q
 \end{align*}
 
-\item formal specification
-\item explanation
+\item
+Write a formal specification of the correctness of the program you designed. Such a specification often assumes the following general form:\\
+\begin{align*}
+&init \ -> \ Post\\
+&stable \ Post\\
+\end{align*}
+\\
+\item
+Explain in narrative form (no formal proof) the steps involved in proving these two properties.\\
 \end{enumerate}
 
 
