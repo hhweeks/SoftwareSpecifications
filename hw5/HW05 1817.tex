@@ -40,18 +40,26 @@ q=N\quad&\\
 \textbf{always}\\
 \textbf{assign}\\
 \begin{align*}
-&\langle \ || \ i,j : 1\leq i,j< (p+1) \ :: A[i,j]:=B[j,i] \rangle \\
+&\langle \ || \ i \in\{p+1, \ q-1\} \wedge (q-1)< j < (p+1) \ ::  A[i,j]:=B[j,i]\rangle\\
 &||\\
-&\langle \ || \ i,j : (q-1) < i,j \leq N \ :: A[i,j]:=B[j,i] \rangle \\
+&\langle \ || \ j \in\{p+1, \ q-1\} \wedge (q-1)< i < (p+1) \ ::  A[i,j]:=B[j,i]\rangle\\
 &||\\
 &p,q := p+1,\ q-1\ if\ p \leq q
 \end{align*}
 
+\iffalse
+&\langle \ || \ i,j : 1\leq i,j< (p+1) \ :: A[i,j]:=B[j,i] \ \rangle \\
+&||\\
+&\langle \ || \ i,j : (q-1) < i,j \leq N \ :: A[i,j]:=B[j,i] \ \rangle \\
+\fi
+
 \item
 Write a formal specification of the correctness of the program you designed. Such a specification often assumes the following general form:\\
 \begin{align*}
-&init \ -> \ Post\\
-&stable \ Post\\
+&init \ \leadsto \ Post\\
+&\textbf{stable} \ Post\\
+&init \equiv A=B\\
+&post \equiv \forall i,j : 1\leq i,j \leq N :: A[i,j]=B[j,i]
 \end{align*}
 \\
 \item
