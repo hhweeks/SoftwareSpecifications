@@ -40,18 +40,20 @@ q=N\quad&\\
 \textbf{always}\\
 \textbf{assign}\\
 \begin{align*}
-&\langle \ || \ i \in\{p+1, \ q-1\} \wedge (q-1)< j < (p+1) \ ::  A[i,j]:=B[j,i]\rangle\\
+%&\langle \ || \ i \in\{p+1, \ q-1\} \wedge (q-1)< j < (p+1) \ ::  A[i,j]:=B[j,i]\rangle\\
+%&||\\
+%&\langle \ || \ j \in\{p+1, \ q-1\} \wedge (q-1)< i < (p+1) \ ::  A[i,j]:=B[j,i]\rangle\\
+%&||\\
+%&p,q := p+1,\ q-1\ if\ p \leq q
+&p := p+1\ if \ p \leq q\\
+& \quad \quad \sim q\\
+&|| \ q := q-1 \ if \ p \leq q \\ 
 &||\\
-&\langle \ || \ j \in\{p+1, \ q-1\} \wedge (q-1)< i < (p+1) \ ::  A[i,j]:=B[j,i]\rangle\\
+&\langle \ || \ j \in\{p,q\} \wedge q<i<p \ :: \ B[i,j]:=B[j,i] \rangle \\
 &||\\
-&p,q := p+1,\ q-1\ if\ p \leq q
+&\langle \ || \ i \in\{p,q\} \wedge q<j<p \ :: \ B[i,j]:=B[j,i] \rangle \\
 \end{align*}
 
-\iffalse
-&\langle \ || \ i,j : 1\leq i,j< (p+1) \ :: A[i,j]:=B[j,i] \ \rangle \\
-&||\\
-&\langle \ || \ i,j : (q-1) < i,j \leq N \ :: A[i,j]:=B[j,i] \ \rangle \\
-\fi
 
 \item
 Write a formal specification of the correctness of the program you designed. Such a specification often assumes the following general form:\\
@@ -59,7 +61,9 @@ Write a formal specification of the correctness of the program you designed. Suc
 &init \ \leadsto \ Post\\
 &\textbf{stable} \ Post\\
 &init \equiv A=B\\
-&post \equiv \forall i,j : 1\leq i,j \leq N :: A[i,j]=B[j,i]
+&post \equiv \forall i,j : 1\leq i,j \leq N :: A[i,j]=B[j,i]\\
+&\textbf{inv\ } 1\\
+&\textbf{inv\ } \forall i,j : 1\leq i,j \leq N :: B[i,j]=A[i,j] \vee A[j,i] \\%prevents code ahead of p, behind q from being scrambled
 \end{align*}
 \\
 \item
